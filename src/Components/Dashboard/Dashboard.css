@@ -1,0 +1,32 @@
+.dashboard-1 {
+    display: flex;
+    flex-direction: column;
+}
+.dash1-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../../Images/page.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    height: 540px;
+}
+.dash1-text2 {
+    font-weight: bold;
+    font-size: 20px;
+}
+.dash1-button button {
+    background-color: dodgerblue;
+    cursor: pointer;
+    width: 200px;
+    height: 42px;
+    border: hidden;
+    border-radius: 30px;
+}
+.dash1-button button:hover {
+    color: white;
+}

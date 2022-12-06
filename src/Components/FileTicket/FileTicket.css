@@ -1,0 +1,65 @@
+.app-ticket {
+    display: flex;
+    flex-direction: column;
+}
+.app__ticket{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    background-color: white;
+    padding-bottom: 30px;
+    margin-left: 250px;
+    margin-right: 250px;
+    margin-top: 20px;
+}
+.app__flex button{
+    background-color: dodgerblue;
+    width: 250px;
+    height: 40px;
+    border: hidden;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 15px;
+}
+.app__flex button:hover{
+    color: white;
+}
+.form-data {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+.form-data label{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+}
+.form-data input {
+    width: 450px;
+    height: 28px;
+    border-radius: 4px;
+}
+.form-data select {
+    width: 450px;
+    height: 28px;
+    border-radius: 4px;
+}
+.form-data button {
+    background-color: dodgerblue;
+    border: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 270px;
+    height: 40px;
+    margin-left: 100px;
+    margin-top: 20px;
+}
+.form-data button:hover {
+    color: white;
+}
+.head-text{
+    color: dodgerblue;
+}

@@ -1,0 +1,43 @@
+.view__ticket{
+  margin-left: 200px;
+  gap: 10px;
+}
+.table-head{
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  margin-left: 40px;
+}
+.table-content{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.table-cols{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.table-cols0{
+  margin-left: 40px;
+  display: flex;
+  gap: 20px;
+}
+#col01{
+  margin-left: 10px;
+}
+#col02{
+  margin-left: 290px;
+}
+#col03{
+  margin-left: 150px;
+}
+#col04{
+  margin-left: 10px;
+}
+#col05{
+  margin-left: 20px;
+}
+

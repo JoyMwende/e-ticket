@@ -1,0 +1,273 @@
+.signup{
+    background-color: #B6D0E2;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 30px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+}
+.signup-left img{
+    width: 600px;
+    height: 575px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.signup-right {
+    background-color: #B6D0E2;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.signup-title h1 {
+    color: dodgerblue;
+}
+.sign-up{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.signup-button button{
+    background-color: dodgerblue;
+    width: 150px;
+    height: 40px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: hidden;
+}
+.signup-button button:hover{
+    width: 160px;
+    height: 42px;
+}
+#input-1{
+    width: 300px;
+    height: 35px;
+    border-radius: 6px;
+    border: hidden;
+}
+#input-2{
+    width: 300px;
+    height: 35px;
+    border-radius: 6px;
+    border: hidden;
+}
+#input-3{
+    width: 300px;
+    height: 35px;
+    border-radius: 6px;
+    border: hidden;
+}
+#input-4{
+    width: 300px;
+    height: 35px;
+    border-radius: 6px;
+    border: hidden;
+}
+#station{
+    width: 300px;
+    height: 40px;
+    border-radius: 6px;
+    border: 1px;
+}
+#occupation{
+    width: 300px;
+    height: 40px;
+    border-radius: 6px;
+    border: 1px;
+}
+.signup-form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+.signup-name{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+}
+.signup-work{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+}
+.signup-occ{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+}
+.signup-email{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+}
+.signup-num{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+}
+.signup-password{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+}
+#signup-button{
+    align-items: center;
+}
+.signup-text {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+#log-in {
+    text-decoration: none;
+    color: blue;
+    cursor: pointer;
+    font-size: 18px;
+}
+#log-in:hover{
+    color: rgb(229, 125, 125);
+}
+
+@media only screen and (max-width:768px){
+    section{
+      padding: 30px;
+      margin: auto;
+      width: 768px;
+      display: flex;
+      flex-direction: column;
+    }
+    .signup{
+    background-color: beige;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 20px;
+    border-radius: 15px;
+    }
+    .sign-up{
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .signup-button button{
+        background-color: dodgerblue;
+        width: 150px;
+        height: 40px;
+        border-radius: 8px;
+        cursor: pointer;
+        border: hidden;
+    }
+    .signup-button button:hover{
+        width: 160px;
+        height: 42px;
+    }
+    #input-1{
+        width: 300px;
+        height: 35px;
+        border-radius: 6px;
+        border: hidden;
+    }
+    #input-2{
+        width: 300px;
+        height: 35px;
+        border-radius: 6px;
+        border: hidden;
+    }
+    #input-3{
+        width: 300px;
+        height: 35px;
+        border-radius: 6px;
+        border: hidden;
+    }
+    #input-4{
+        width: 300px;
+        height: 35px;
+        border-radius: 6px;
+        border: hidden;
+    }
+    #station{
+        width: 300px;
+        height: 40px;
+        border-radius: 6px;
+        border: 1px;
+    }
+    #occupation{
+        width: 300px;
+        height: 40px;
+        border-radius: 6px;
+        border: 1px;
+    }
+    .signup-form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    }
+    .signup-name{
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        align-items: center;
+    }
+    .signup-work{
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        align-items: center;
+    }
+    .signup-occ{
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        align-items: center;
+    }
+    .signup-email{
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        align-items: center;
+    }
+    .signup-num{
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        align-items: center;
+    }
+    .signup-password{
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        align-items: center;
+    }
+    #signup-buttion{
+        align-items: center;
+    }
+    .signup-text {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+    }
+    #log-in {
+        text-decoration: none;
+        color: blue;
+        cursor: pointer;
+        font-size: 18px;
+    }
+    #log-in:hover{
+        color: rgb(229, 125, 125);
+    }
+}

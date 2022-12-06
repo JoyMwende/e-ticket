@@ -1,0 +1,119 @@
+.ticket {
+    display: flex;
+    flex-direction: column;
+}
+.ticket-form{
+    margin-top: 120px;
+    margin-bottom: 60px;
+}
+#ticket-name{
+    float: left;
+}
+.eticket-title h1 {
+    color: dodgerblue;
+    font-weight: bold;
+    font-size: 27px;
+}
+/* fieldset{
+    border-top: hidden;
+    border-bottom: hidden;
+} */
+#file-button {
+    background-color: dodgerblue;
+    border: hidden;
+    width: 400px;
+    height: 35px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+#file-button:hover{
+    color: white;
+}
+#ticket-button {
+    background-color: dodgerblue;
+    border: hidden;
+    width: 200px;
+    height: 35px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+#ticket-button:hover{
+    color: white;
+}
+.eticket-button {
+    padding-left: 35px;
+    padding-bottom: 50px;
+     display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.ticket-buttons {
+    padding-left: 35px;
+    padding-bottom: 50px;
+     display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+.eticket-form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+.eticket-form input{
+    width: 600px;
+    height: 20px;
+}
+.eticket-form select{
+    width: 600px;
+    height: 20px;
+}
+.eticket-form textarea {
+    width: 600px;
+}
+.eticket-form input:hover{
+    box-shadow: inset;
+    box-decoration-break: clone;
+    border-color: dodgerblue;
+}
+.eticket-form textarea:hover{
+    box-shadow: inset;
+    box-decoration-break: clone;
+    border-color: dodgerblue;
+}
+.eticket-name{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+.eticket-email{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+.eticket-station {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+.eticket-occupation {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+.eticket-machine{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+.eticket-description{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
