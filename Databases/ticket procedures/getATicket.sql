@@ -3,7 +3,7 @@ create procedure getATicket(
 )
 
 as begin
-select * from ticket where id=@id and isDeleted = 0;
+select * from ticket where id=@id;
 end
 
 

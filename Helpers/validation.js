@@ -31,6 +31,7 @@ const validateTicket = Joi.object().keys({
   station_id: Joi.required(),
   machine_id: Joi.required(),
   description: Joi.required(),
+  status: Joi.required(),
   //isDeleted: Joi.required(),
 });
 

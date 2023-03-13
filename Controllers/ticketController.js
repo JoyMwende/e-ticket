@@ -4,8 +4,17 @@ const { v4: uuidv4 } = require("uuid");
 const { validateTicket } = require("../Helpers/validation");
 
 //create a ticket
-async function createTicket (req, res) {
-  const {id, staff_id, machine_id, station_id, description, status, updated_at, isDeleted} = req.body;
+async function createTicket(req, res) {
+  const {
+    id,
+    staff_id,
+    machine_id,
+    station_id,
+    description,
+    status,
+    updated_at,
+    isDeleted,
+  } = req.body;
   const { error } = validateTicket.validate(req.body);
   if (error)
     return res
@@ -54,23 +63,23 @@ async function getATicket(req, res) {
   }
 }
 //admin update status
-async function updateStatus(req,res) {
-const {status,id} =req.body
+async function updateStatus(req, res) {
+  const { status, id } = req.body;
   try {
-    // let pool= await mssql.connect(config)
-    // await pool.request()
-    // .input("status",mssql.VarChar, status)
-    // .input("id", mssql.VarChar,id)
-    // .execute(updateStatus)
-  } catch (error) {
-    
-  }
+    let pool = await mssql.connect(config);
+    await pool
+      .request()
+      .input("status", mssql.VarChar, status)
+      .input("id", mssql.VarChar, id)
+      .execute("updateStatus");
+  } catch (error) {}
 }
 
 //update a filed ticket
 async function updateTicket(req, res) {
   const id = req.params.id;
-  const {staff_id, machine_id, station_id, description, isDeleted } = req.body;
+  const { staff_id, machine_id, station_id, description, isDeleted, status } =
+    req.body;
   try {
     let pool = await mssql.connect(config);
     await pool
@@ -80,6 +89,7 @@ async function updateTicket(req, res) {
       .input("machine_id", mssql.VarChar, machine_id)
       .input("station_id", mssql.VarChar, station_id)
       .input("description", mssql.VarChar, description)
+      .input("status", mssql.VarChar, status)
       .input("isDeleted", isDeleted)
       .execute("updateTicket");
     res.json("You have successfully updated a ticket!");
@@ -112,5 +122,12 @@ async function deleteAllTickets(req, res) {
   }
 }
 
-module.exports = {createTicket, getATicket, getTickets, updateTicket, deleteTicket, deleteAllTickets, updateStatus}
-
+module.exports = {
+  createTicket,
+  getATicket,
+  getTickets,
+  updateTicket,
+  deleteTicket,
+  deleteAllTickets,
+  updateStatus,
+};

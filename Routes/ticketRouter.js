@@ -8,5 +8,6 @@ router.get('/:id', ticketController.getATicket)
 router.put('/:id', ticketController.updateTicket)
 router.delete('/:id/cancel', ticketController.deleteTicket)
 router.delete('/tickets', ticketController.deleteAllTickets)
+router.put('/:id/update', ticketController.updateStatus)
 
 module.exports = router
