@@ -11,7 +11,7 @@ class TicketDataDervice {
     return http.post("/", data);
   }
   update(id, data) {
-    return http.put(`/${id}`);
+    return http.put(`/${id}`, data);
   }
   delete(id) {
     return http.delete(`/${id}/cancel`);

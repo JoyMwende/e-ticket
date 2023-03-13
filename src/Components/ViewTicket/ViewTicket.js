@@ -4,14 +4,16 @@ import generatePDF from "../../services/reportGenerator";
 // import emailjs from "@emailjs/browser";
 import "./ViewTicket.css";
 import axios from "axios";
+import fileDownload from "js-file-download";
 
-import {  retrieveAllTickets } from "../../Redux/Actions/tickets";
+import { retrieveAllTickets } from "../../Redux/Actions/tickets";
 import Navbar from "../Navbar/Navbar";
+import { Link } from "react-router-dom";
 
 class ViewTicket extends Component {
   constructor(props) {
     super(props);
-    //this.reportTicket = this.reportTicket.bind(this);
+    this.handleDownload = this.handleDownload.bind(this);
     this.state = {
       items: [],
       DataIsLoaded: false,
@@ -21,34 +23,40 @@ class ViewTicket extends Component {
       currentPage: 0,
     };
   }
- 
-
-
 
   componentDidMount() {
     // this.props
-      fetch("http://localhost:9000/ticket")
-        .then((res) => res.json())
-        .then((json) => {
-          console.log(json);
-          this.setState({
-            items: json,
-            DataIsLoaded: true
-          })
-        })
-        .catch((e) => {
-          console.log(e);
+    fetch("http://localhost:9000/ticket")
+      .then((res) => res.json())
+      .then((json) => {
+        console.log(json);
+        this.setState({
+          items: json,
+          DataIsLoaded: true,
         });
+      })
+      .catch((e) => {
+        console.log(e);
+      });
   }
-  
 
- 
+  handleDownload = (url, filename) => {
+    axios
+      .get(url, {
+        responseType: "blob",
+      })
+      .then((res) => {
+        fileDownload(res.data, filename);
+        console.log();
+      });
+  };
+
   render() {
     const { DataIsLoaded, items } = this.state;
-    if(!DataIsLoaded) return 
+    if (!DataIsLoaded) return;
     <div>
       <h1>Please wait...</h1>
-    </div>
+    </div>;
 
     return (
       <div className="view-ticket">
@@ -57,7 +65,7 @@ class ViewTicket extends Component {
         </div>
 
         <div className="view__ticket">
-          <h1>Tickets</h1>{" "}
+          <h1> Filed Tickets</h1>{" "}
           <table className="table">
             <thead className="table-head">
               <tr className="table-cols0">
@@ -90,10 +98,26 @@ class ViewTicket extends Component {
                   <td id="col4">{item.machine_id}</td>
                   <td id="col5">{item.description}</td>
                   <td id="col6">{item.status}</td>
+                  <Link id="view-link" to={`/ViewTicket/${item.id}`}>
+                    <td id="col7">View</td>
+                  </Link>
                 </tr>
               ))}
             </tbody>
           </table>
+          <br></br>
+          <br></br>
+          {/* <button
+            className="view-button"
+            onClick={() => {
+              this.handleDownload(
+                "http://localhost:9000/ticket",
+                "tickets.pdf"
+              );
+            }}
+          >
+            Download Report */}
+          {/* </button> */}
         </div>
       </div>
     );

@@ -23,12 +23,6 @@
   justify-content: flex-start;
   align-items: flex-start;
 }
-.table-cols td{
-   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
 .table-cols0{
   margin-left: 40px;
   display: flex;
@@ -65,24 +59,4 @@
 }
 #col6{
   margin-left: 180px;
-  text-align: left;
 }
-#view-link{
-  margin-left: 50px;
-  text-align: left;
-}
-#view-link{
-  background-color: dodgerblue;
-  border: hidden;
-  border-radius: 20px;
-  width: 100px;
-  height: 30px;
-  padding-left: 40px;
-  text-decoration: none;
-  color: white;
-  cursor: pointer;
-}
-#view-link:visited{
-  color: purple;
-}
-

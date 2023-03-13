@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 // import emailjs from "@emailjs/browser";
-import './FileTicket.css'
+import "./FileTicket.css";
 // import axios from "axios";
-
 
 import { createTicket } from "../../Redux/Actions/tickets";
 import Navbar from "../Navbar/Navbar";
+import SMSForm from "../SMSForm/SMSForm";
 
 class AddTicket extends Component {
   constructor(props) {
@@ -19,6 +19,7 @@ class AddTicket extends Component {
       staff_id: "",
       machine_id: "",
       station_id: "",
+      status: "filed",
     };
     this.form = React.createRef();
     this.sendEmail = this.sendEmail.bind(this);
@@ -31,15 +32,16 @@ class AddTicket extends Component {
   };
 
   saveTicket() {
-    const { description, staff_id, machine_id, station_id } = this.state;
+    const { description, staff_id, machine_id, station_id, status } = this.state;
     this.props
-      .createTicket(description, staff_id, machine_id, station_id)
+      .createTicket(description, staff_id, machine_id, station_id, status)
       .then((data) => {
         this.setState({
           description: data.description,
           staff_id: data.staff_id,
           machine_id: data.machine_id,
           station_id: data.station_id,
+          status: data.status,
           submitted: true,
         });
         console.log(data);
@@ -60,7 +62,7 @@ class AddTicket extends Component {
 
   //form = useRef();
 
-  sendEmail = async(e) => {
+  sendEmail = async (e) => {
     e.preventDefault();
 
     console.log(this.state);
@@ -69,7 +71,7 @@ class AddTicket extends Component {
       headers: {
         "Content-type": "application/json",
       },
-     body: JSON.stringify(this.state),
+      body: JSON.stringify(this.state),
     })
       .then((res) => res.json())
       .then(() => {
@@ -81,12 +83,9 @@ class AddTicket extends Component {
         });
       });
 
-        // let path = `/SMSForm`;
-        // navigate(path);
-
+    // let path = `/SMSForm`;
+    // navigate(path);
   };
-
- 
 
   // componentDidMount() {
   //   const getAllTickets = async () => {
@@ -99,7 +98,6 @@ class AddTicket extends Component {
   //   };
   //   getAllTickets();
   // }
-
 
   render() {
     return (
@@ -124,6 +122,8 @@ class AddTicket extends Component {
               <button type="button" ref={this.form} onClick={this.sendEmail}>
                 Send Email
               </button>
+              <br></br>
+              <SMSForm />
             </div>
           ) : (
             <form className="app_ticket-form app_flex">

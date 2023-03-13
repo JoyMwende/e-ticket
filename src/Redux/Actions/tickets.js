@@ -13,7 +13,8 @@ export const createTicket =
     description,
     staff_id,
     machine_id,
-    station_id
+    station_id,
+    status
   ) =>
   async (dispatch) => {
     try {
@@ -21,7 +22,8 @@ export const createTicket =
         description,
         staff_id,
         machine_id,
-        station_id
+        station_id,
+        status
       });
       dispatch({
         type: CREATE_TICKET,
